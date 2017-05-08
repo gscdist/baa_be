@@ -1,7 +1,7 @@
 ---
 applications:
 - name:    baa_be
-  host:    baa_be
+  command: node server.js
   memory:  128M
   services:
     - MongoDB-w7
