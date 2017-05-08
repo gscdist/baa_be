@@ -1,5 +1,5 @@
 {
-  "name": "compose-mongodb-helloworld-nodejs",
+  "name": "baa_be",
   "version": "0.0.0",
   "dependencies": {
     "body-parser": "^1.15.2",

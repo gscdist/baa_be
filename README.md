@@ -1,6 +1,9 @@
-# compose-mongodb-helloworld-nodejs Overview
+# baa_be Overview
 
 compose-mongodb-helloworld-nodejs is a sample Bluemix application that shows you how to connect to an IBM Compose for MongoDB for Bluemix service using Node.js.
+git clone https://github.com/IBM-bluemix/compose-mongodb-helloworld-nodejs.git
+
+This baa_be uses compose-mongodb-helloworld-nodejs initially as a base and it becomes the backend of the baa app.
 
 ## Running the app on Bluemix
 
@@ -8,10 +11,10 @@ compose-mongodb-helloworld-nodejs is a sample Bluemix application that shows you
 
 2. Download and install the [Cloud Foundry CLI][cloud_foundry_url] tool
 
-3. Clone the compose-mongodb-helloworld-nodejs repo to your local environment from your terminal using the following command:
+3. Clone the baa_be repo to your local environment from your terminal using the following command:
 
   ```
-  git clone https://github.com/IBM-bluemix/compose-mongodb-helloworld-nodejs.git
+  git clone https://github.com/gscdist/baa_be.git
   ```
 
 4. `cd` into the directory for this example application
@@ -24,26 +27,19 @@ compose-mongodb-helloworld-nodejs is a sample Bluemix application that shows you
   $ cf api https://api.ng.bluemix.net
   $ cf login
   ```
-
-7. Create the Compose for MongoDB service in Bluemix if you haven't already done so.
-
-  **Note :** The Compose for MongoDB service does not offer a free plan. For details of pricing, see the _Pricing Plans_ section of the [Compose for MongoDB service][compose_for_mongodb_url] in Bluemix.
-
-  ```
-  $ cf create-service compose-for-mongodb Standard my-compose-for-mongodb-service
-  ```
-
-8. Bind the service to the application.
-
-  ```
-  $ cf bind-service compose-mongodb-helloworld-nodejs my-compose-for-mongodb-service
-  ```
-  
-9. Push the app to Bluemix. When you push the app it is bound to the service specified in the manifest file.
+ 
+8. Push the app to Bluemix. When you push the app it is bound to the service specified in the manifest file.
 
   ```
   $ cf push
   ```
+## Deploy the App
+
+<b>1. Right-Click (or on a Mac, Control-Click) and "Open Link in New Tab" on the 'Deploy to Bluemix' button shown below.<br>
+(NOTE: The button is located on this VERY webpage right below this bullet item - do NOT look for it within your bluemix account!).</b>
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; [![Deploy to Bluemix](https://console.ng.bluemix.net/devops/setup/deploy/button.png)](https://console.ng.bluemix.net/devops/setup/deploy?repository=https://github.com/gscdist/baa_be.git)
+
 
 Now when you visit `<host>.mybluemix.net/` you will be able to view the contents of your MongoDB collection.
 
@@ -65,7 +61,7 @@ The app uses a PUT and a GET operation:
   - returns the response of the database command to [main.js](public/javascript/main.js)
 
 ## Privacy Notice
-The compose-mongodb-helloworld-nodejs sample web application includes code to track deployments to Bluemix and other Cloud Foundry platforms. The following information is sent to a [Deployment Tracker](https://github.com/cloudant-labs/deployment-tracker) service on each deployment:
+The baa_be sample web application includes code to track deployments to Bluemix and other Cloud Foundry platforms. The following information is sent to a [Deployment Tracker](https://github.com/cloudant-labs/deployment-tracker) service on each deployment:
 
 * Application Name (application_name)
 * Space ID (space_id)
